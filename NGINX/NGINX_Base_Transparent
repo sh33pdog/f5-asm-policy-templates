@@ -1,0 +1,45 @@
+{
+  "policy": {
+    "name": "NGINX_Base_Transparent",
+    "template": {
+      "name": "POLICY_TEMPLATE_NGINX_BASE"
+    },
+    "applicationLanguage": "utf-8",
+    "signature-sets": [
+      {
+        "name": "High Accuracy Signatures"
+      },
+      {
+        "name": "Medium Accuracy Signatures"
+      },
+      {
+        "name": "Predictable Resource Location Signatures"
+      },
+      {
+        "name": "Command Execution Signatures"
+      },
+      {
+        "name": "Cross Site Scripting Signatures"
+      },
+      {
+        "name": "Path Traversal Signatures"
+      },
+      {
+        "name": "Remote File Include Signatures"
+      },
+      {
+        "name": "SQL Injection Signatures"
+      },
+      {
+        "name": "Server Side Code Injection Signatures"
+      },
+      {
+        "name": "OS Command Injection Signatures"
+      }
+    ],
+    "enforcementMode": "transparent",
+    "csrf-protection": {
+      "enabled": true
+    }
+  }
+}

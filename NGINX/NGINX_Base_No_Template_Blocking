@@ -86,12 +86,6 @@
         {
           "alarm": true,
           "block": true,
-          "description": "Illegal repeated header",
-          "name": "VIOL_HEADER_REPEATED"
-        },
-        {
-          "alarm": true,
-          "block": true,
           "description": "Violation Rating Threat detected",
           "name": "VIOL_RATING_THREAT"
         },
@@ -193,15 +187,9 @@
         },
         {
           "alarm": true,
-          "block": false,
+          "block": true,
           "description": "HTTP protocol compliance failed",
           "name": "VIOL_HTTP_PROTOCOL"
-        },
-        {
-          "alarm": true,
-          "block": false,
-          "description": "Illegal meta character in value",
-          "name": "VIOL_PARAMETER_VALUE_METACHAR"
         },
         {
           "alarm": true,

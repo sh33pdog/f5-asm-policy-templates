@@ -80,15 +80,27 @@
         {
           "description": "POST request with Content-Length: 0",
           "enabled": true
+        },
+        {
+          "description": "Check maximum number of parameters"
+        },
+        {
+          "description": "High ASCII characters in headers"
+        },
+        {
+          "description": "Null in request"
+        },
+        {
+          "description": "Host header contains IP address"
+        },
+        {
+          "description": "Bad multipart parameters parsing"
+        },
+        {
+          "description": "Bad multipart/form-data request parsing"
         }
       ],
       "violations": [
-        {
-          "alarm": true,
-          "block": true,
-          "description": "Violation Rating Threat detected",
-          "name": "VIOL_RATING_THREAT"
-        },
         {
           "alarm": true,
           "block": true,
@@ -196,6 +208,146 @@
           "block": true,
           "description": "Malformed XML data",
           "name": "VIOL_XML_MALFORMED"
+        },
+        {
+          "description": "Malformed gRPC data",
+          "name": "VIOL_GRPC_MALFORMED"
+        },
+        {
+          "description": "Illegal file type",
+          "name": "VIOL_FILETYPE"
+        },
+        {
+          "description": "Illegal meta character in value",
+          "name": "VIOL_PARAMETER_VALUE_METACHAR"
+        },
+        {
+          "description": "Illegal request content type",
+          "name": "VIOL_URL_CONTENT_TYPE"
+        },
+        {
+          "description": "Illegal cookie length",
+          "name": "VIOL_COOKIE_LENGTH"
+        },
+        {
+          "description": "Illegal parameter data type",
+          "name": "VIOL_PARAMETER_DATA_TYPE"
+        },
+        {
+          "description": "Parameter value does not comply with regular expression",
+          "name": "VIOL_PARAMETER_VALUE_REGEXP"
+        },
+        {
+          "description": "Illegal parameter array value",
+          "name": "VIOL_PARAMETER_ARRAY_VALUE"
+        },
+        {
+          "description": "Illegal POST data length",
+          "name": "VIOL_POST_DATA_LENGTH"
+        },
+        {
+          "description": "JSON data does not comply with JSON schema",
+          "name": "VIOL_JSON_SCHEMA"
+        },
+        {
+          "description": "Illegal parameter",
+          "name": "VIOL_PARAMETER"
+        },
+        {
+          "description": "Illegal meta character in header",
+          "name": "VIOL_HEADER_METACHAR"
+        },
+        {
+          "description": "Illegal parameter value length",
+          "name": "VIOL_PARAMETER_VALUE_LENGTH"
+        },
+        {
+          "description": "Illegal URL length",
+          "name": "VIOL_URL_LENGTH"
+        },
+        {
+          "description": "Disallowed file upload content detected",
+          "name": "VIOL_FILE_UPLOAD"
+        },
+        {
+          "description": "Illegal header length",
+          "name": "VIOL_HEADER_LENGTH"
+        },
+        {
+          "description": "Data Guard: Information leakage detected",
+          "name": "VIOL_DATA_GUARD"
+        },
+        {
+          "description": "Illegal query string length",
+          "name": "VIOL_QUERY_STRING_LENGTH"
+        },
+        {
+          "description": "Illegal parameter location",
+          "name": "VIOL_PARAMETER_LOCATION"
+        },
+        {
+          "description": "Mandatory parameter is missing",
+          "name": "VIOL_MANDATORY_PARAMETER"
+        },
+        {
+          "description": "Illegal parameter numeric value",
+          "name": "VIOL_PARAMETER_NUMERIC_VALUE"
+        },
+        {
+          "description": "Illegal meta character in parameter name",
+          "name": "VIOL_PARAMETER_NAME_METACHAR"
+        },
+        {
+          "description": "gRPC data does not comply with format settings",
+          "name": "VIOL_GRPC_FORMAT"
+        },
+        {
+          "description": "Disallowed file upload content detected in body",
+          "name": "VIOL_FILE_UPLOAD_IN_BODY"
+        },
+        {
+          "description": "Illegal repeated parameter name",
+          "name": "VIOL_PARAMETER_REPEATED"
+        },
+        {
+          "description": "Illegal URL",
+          "name": "VIOL_URL"
+        },
+        {
+          "description": "Illegal request length",
+          "name": "VIOL_REQUEST_LENGTH"
+        },
+        {
+          "description": "Illegal repeated header",
+          "name": "VIOL_HEADER_REPEATED"
+        },
+        {
+          "description": "Illegal static parameter value",
+          "name": "VIOL_PARAMETER_STATIC_VALUE"
+        },
+        {
+          "description": "Violation Rating Threat detected",
+          "name": "VIOL_RATING_THREAT"
+        },
+        {
+          "description": "Mandatory request body is missing",
+          "name": "VIOL_MANDATORY_REQUEST_BODY"
+        },
+        {
+          "description": "Illegal empty parameter value",
+          "name": "VIOL_PARAMETER_EMPTY_VALUE"
+        },
+        {
+          "description": "Illegal meta character in URL",
+          "name": "VIOL_URL_METACHAR"
+        },
+        {
+          "description": "Mandatory HTTP header is missing",
+          "name": "VIOL_MANDATORY_HEADER"
+        },
+        {
+          "description": "Illegal gRPC method",
+          "name": "VIOL_GRPC_METHOD"
         }
       ]
     },
@@ -270,7 +422,7 @@
     "dos-protection": {
       "enabled": false
     },
-    "enforcementMode": "blocking",
+    "enforcementMode": "transparent",
     "enforcer-settings": {
       "enforcerStateCookies": {
         "httpOnlyAttribute": true,
@@ -746,6 +898,7 @@
         "name": "Default",
         "useXmlResponsePage": false
       }
-    ]
+    ],
+    "applicationLanguage": "utf-8"
   }
 }

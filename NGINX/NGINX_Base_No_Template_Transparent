@@ -1,5 +1,10 @@
 {
   "policy": {
+    "name": "NGINX_Base_Blocking",
+    "applicationLanguage": "utf-8",
+    "signature-sets": [
+      {
+  "policy": {
     "adaptive-violation-rating": {
       "enabled": false,
       "inspectMinOriginalViolationRating": 3

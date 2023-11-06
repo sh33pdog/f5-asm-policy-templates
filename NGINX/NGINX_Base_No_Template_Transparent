@@ -1,6 +1,6 @@
 {
   "policy": {
-    "name": "NGINX_Base_Blocking",
+    "name": "NGINX_Base_No_Template_Transparent",
     "applicationLanguage": "utf-8",
     "signature-sets": [
       {

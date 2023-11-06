@@ -1,5 +1,6 @@
 {
   "policy": {
+"name": "NGINX_Base_Transparent",
     "adaptive-violation-rating": {
       "enabled": false,
       "inspectMinOriginalViolationRating": 3

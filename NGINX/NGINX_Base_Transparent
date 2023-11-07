@@ -5,41 +5,95 @@
       "name": "POLICY_TEMPLATE_NGINX_BASE"
     },
     "applicationLanguage": "utf-8",
-    "signature-sets": [
-      {
-        "name": "High Accuracy Signatures"
-      },
-      {
-        "name": "Medium Accuracy Signatures"
-      },
-      {
-        "name": "Predictable Resource Location Signatures"
-      },
-      {
-        "name": "Command Execution Signatures"
-      },
-      {
-        "name": "Cross Site Scripting Signatures"
-      },
-      {
-        "name": "Path Traversal Signatures"
-      },
-      {
-        "name": "Remote File Include Signatures"
-      },
-      {
-        "name": "SQL Injection Signatures"
-      },
-      {
-        "name": "Server Side Code Injection Signatures"
-      },
-      {
-        "name": "OS Command Injection Signatures"
-      }
-    ],
     "enforcementMode": "transparent",
     "csrf-protection": {
-      "enabled": true
-    }
+      "enabled": false
+    },
+    "signature-sets": [
+      {
+        "name": "Command Execution Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Cross Site Scripting Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Directory Indexing Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Generic Detection Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Generic Detection Signatures (High/Medium Accuracy)",
+        "alarm": true
+      },
+      {
+        "name": "HTTP Response Splitting Signatures",
+        "alarm": true
+      },
+      {
+        "name": "High Accuracy Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Information Leakage Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Medium Accuracy Signatures",
+        "alarm": true
+      },
+      {
+        "name": "OS Command Injection Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Other Application Attacks Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Information Leakage Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Medium Accuracy Signatures",
+        "alarm": true
+      },
+      {
+        "name": "OS Command Injection Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Other Application Attacks Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Predictable Resource Location Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Remote File Include Signatures",
+        "alarm": true
+      },
+      {
+        "name": "SQL Injection Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Server Side Code Injection Signatures",
+        "alarm": true
+      },
+      {
+        "name": "Server Side Code Injection Signatures",
+        "alarm": true
+      },
+      {
+        "name": "XPath Injection Signatures",
+        "alarm": true
+      }
+    ]
   }
 }

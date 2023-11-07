@@ -1,0 +1,249 @@
+{
+  "policy": {
+    "name": "policy_name",
+    "template": {
+      "name": "POLICY_TEMPLATE_NGINX_BASE"
+    },
+    "applicationLanguage": "utf-8",
+    "enforcementMode": "transparent",
+    "blocking-settings": {
+      "violations": [
+        {
+          "name": "VIOL_ATTACK_SIGNATURE",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_BOT_CLIENT",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_COOKIE_MALFORMED",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_EVASION",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_EVASION",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_HTTP_PROTOCOL",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_BLACKLISTED_IP",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_HTTP_RESPONSE_STATUS",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_JSON_SCHEMA",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_JSON_MALFORMED",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_XML_MALFORMED",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_ASM_COOKIE_MODIFIED",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_COOKIE_MODIFIED",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_THREAT_CAMPAIGN",
+          "alarm": true,
+          "block": false
+        },
+        {
+          "name": "VIOL_XML_FORMAT",
+          "alarm": true,
+          "block": false
+        }
+      ],
+      "evasions": [
+        {
+          "description": "%u decoding",
+          "enabled": false
+        },
+        {
+          "description": "Apache whitespace",
+          "enabled": false
+        },
+        {
+          "description": "Bad unescape",
+          "enabled": false
+        },
+        {
+          "description": "Bare byte decoding",
+          "enabled": false
+        },
+        {
+          "description": "Directory traversals",
+          "enabled": false
+        },
+        {
+          "description": "IIS Unicode codepoints",
+          "enabled": false
+        },
+        {
+          "description": "IIS backslashes",
+          "enabled": false
+        },
+        {
+          "description": "Multiple decoding",
+          "enabled": false
+        }
+      ],
+      "http-protocols": [
+        {
+          "description": "Body in GET or HEAD requests",
+          "enabled": true
+        },
+        {
+          "description": "Check maximum number of headers",
+          "enabled": true,
+          "maxHeaders": 50
+        },
+        {
+          "description": "Chunked request with Content-Length header",
+          "enabled": true
+        },
+        {
+          "description": "Content length should be a positive number",
+          "enabled": true
+        },
+        {
+          "description": "Header name with no header value",
+          "enabled": true
+        },
+        {
+          "description": "POST request with Content-Length: 0",
+          "enabled": true
+        },
+        {
+          "description": "Unescaped space in URL",
+          "enabled": true
+        }
+      ]
+    },
+    "signature-sets": [
+      {
+        "name": "Command Execution Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "Cross Site Scripting Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "Directory Indexing Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "Generic Detection Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "Generic Detection Signatures (High/Medium Accuracy)",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "HTTP Response Splitting Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "High Accuracy Detection Evasion Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "High Accuracy Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "Information Leakage Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "Medium Accuracy Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "OS Command Injection Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "Other Application Attacks Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "Path Traversal Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "Predictable Resource Location Signatures",
+        "block": false,
+        "alarm": true
+      },
+      {
+        "name": "Remote File Include Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "SQL Injection Signatures",
+        "block": false,
+        "alarm": true
+      },
+      {
+        "name": "Server Side Code Injection Signatures",
+        "alarm": true,
+        "block": false
+      },
+      {
+        "name": "XPath Injection Signatures",
+        "block": false,
+        "alarm": true
+      }
+    ],
+    "csrf-protection": {
+      "enabled": false
+    }
+  }
+}
